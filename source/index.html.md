@@ -1,5 +1,5 @@
 ---
-title: Plutus Platform API Reference
+title: Symelation Platform API Reference
 
 language_tabs:
   - shell
@@ -8,7 +8,6 @@ language_tabs:
 
 toc_footers:
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
-  - <a href='https://secure.imogo.co.za/'>IMOGO Platform Login</a>
   - <a href='https://secure.diamondcash.co.za/'>Diamond Cash Platform Login</a>
 
 includes:
