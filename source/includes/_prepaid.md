@@ -60,7 +60,7 @@ This endpoint retrieves the list of mobile networks.
 ```json
 ```
 
-<aside class="notice">Plutus provides the PIN and voucher serial number from the mobile networks in order to phone their customer support if their are issues with your prepaid vouchers.</aside>
+<aside class="notice">Symelation provides the PIN and voucher serial number from the mobile networks in order to phone their customer support if their are issues with your prepaid vouchers.</aside>
 
 > Example of the SMS message sent out:
 

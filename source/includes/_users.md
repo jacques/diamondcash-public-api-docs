@@ -139,7 +139,7 @@ curl -X POST "https://127.0.0.1.xip.io/api/v1/users"
   }
 }
 ```
-This endpoint creates a new customer on the Plutus Platform.  During the process a wallet is created for the customer.
+This endpoint creates a new customer on the Symelation Platform.  During the process a wallet is created for the customer.
 If autoload settings are not specified, the defaults listed below are utilised.
 
 ### HTTP Request
@@ -172,7 +172,7 @@ address1_country | string (2) | [ISO 3166 Alpha 2 code](https://en.wikipedia.org
 mobile_number | integer | MSISDN for the user in E.164 format (minus the leading +)
 home_phone_number | integer | Phone number for the user in E.164 format (minus the leading +) **OPTIONAL**
 email_address | string(64) | Email address of the user
-autoload_type | enum | percentage or monetary for performing an autoload to a users Plutus Master Card.
+autoload_type | enum | percentage or monetary for performing an autoload to a users Diamond Cash Card Master Card.
 autoload_value | integer | When percentage enter a percentage from 0 to 100 for 0% or 100% for example.  When monetary, it allows specifying an amount in cents to autoload i.e. 200000 for R 2000.00)
 key_field | varchar(32) | Your key field for the user (i.e. user id on your system)
 

@@ -1,12 +1,12 @@
 # Introduction
 
-Welcome to the Plutus Platform API! You can use our API to access Plutus Platform API endpoints, for transactional banking via your platform partner.
+Welcome to the Symelation Platform API! You can use our API to access Symelation Platform API endpoints, for transactional banking via your platform partner.
 
 **THIS DOCUMENT IS SUBJECT TO CHANGE**
 
 You can view code examples in the dark area to the right.
 
-If you have any queries about the Plutus Platform API, please direct them to support at transactionafrica dot co dot za.
+If you have any queries about the Symelation Platform API, please direct them to jacques at transactionafrica dot co dot za.
 
 Our API uses JSON payloads over HTTPS and returns JSON payloads back.
 

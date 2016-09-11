@@ -66,7 +66,7 @@ composer require guzzlehttp/guzzle:~6.0
                 [
                     'body' => '{...}',
                     'headers' => [
-                        'Authorization' => 'Token token=YOURPLUTUSTOKEN',
+                        'Authorization' => 'Token token=YOURSYMELATIONTOKEN',
                     ],
                 ]
             );

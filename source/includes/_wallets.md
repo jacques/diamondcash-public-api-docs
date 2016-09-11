@@ -1,8 +1,8 @@
 # Wallets
 
-Plutus Wallets (accounts) provide a virtual account for depositing of money into one of the Plutus deposit accounts.
+Diamond Cash Wallets (accounts) provide a virtual account for depositing of money into one of the Symelation deposit accounts.
 
-The Plutus system uses the following references for allocating money which has been deposited into a users wallet:
+The Symelation system uses the following references for allocating money which has been deposited into a users wallet:
 
 Reference|Description
 ----------|----------

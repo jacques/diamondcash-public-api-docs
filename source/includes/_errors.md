@@ -1,6 +1,6 @@
 # Errors
 
-The Plutus Platform API uses the following error codes:
+The Symelation Platform API uses the following error codes:
 
 Error Code | Meaning
 ---------- | -------

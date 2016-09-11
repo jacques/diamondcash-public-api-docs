@@ -1,11 +1,11 @@
 # Beneficiaries
 
 Beneficiaries are used to make payments from one person to another person.
-The recipient can have an account which is an onnet account (on Plutus) or an
+The recipient can have an account which is an onnet account (on Symelation) or an
 offnet account (which is held at a South African Bank).
 
-Plutus integrates into the South African National Payment System to provide
-EFT Credit services to users to move money from their Plutus account to other
+Symelation integrates into the South African National Payment System to provide
+EFT Credit services to users to move money from their Diamond Cash Card account to other
 bank accounts.
 
 ## List Beneficiaries for a User
@@ -168,7 +168,7 @@ curl "https://127.0.0.1.xip.io/api/v1/banks"
   "details": [
     {
       "id": "1",
-      "bank_name": "Plutus",
+      "bank_name": "Diamond Cash Card",
       "default_branch_code": "000000"
     },
     {

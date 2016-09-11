@@ -1,8 +1,8 @@
 # Business Accounts
 
-Plutus Business Accounts provide a virtual account for depositing of money into one of the Plutus deposit accounts.
+Diamond Cash Business Accounts provide a virtual account for depositing of money into one of the Symelation deposit accounts.
 
-The Plutus system uses the following references for allocating money which has been deposited into a company's business account:
+The Symelation system uses the following references for allocating money which has been deposited into a company's business account:
 
 Reference|Description
 ---------|----------

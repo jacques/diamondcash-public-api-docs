@@ -85,7 +85,7 @@ curl -X POST "https://127.0.0.1.xip.io/api/v1/companies/UUID/payments"
         "id": "http://jsonschema.net/0/branch_code",
         "type": "string",
         "title": "Branch Code",
-        "description": "Branch code for the bank account / wallet account.  Default to 000000 for an on Plutus transaction else use the universal branch code for the bank.",
+        "description": "Branch code for the bank account / wallet account.  Default to 000000 for an on Symelation transaction else use the universal branch code for the bank.",
         "name": "branch_code",
         "default": "00000000"
       },
@@ -147,7 +147,7 @@ curl -X POST "https://127.0.0.1.xip.io/api/v1/companies/UUID/payments"
 }
 ```
 
-This endpoint creates a new customer on the Plutus Platform.  During the process a wallet is create for the customer.
+This endpoint creates a new customer on the Symelation Platform.  During the process a wallet is create for the customer.
 If autoload settings are not specified, the  defaults listed below are utilised.
 
 ### HTTP Request
