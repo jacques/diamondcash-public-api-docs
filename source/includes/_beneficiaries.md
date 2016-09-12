@@ -135,6 +135,12 @@ BENEFICIARY | The UUID of the beneficiary being tombstoned
 
 This endpoint creates a payment the specific beneficiary belonging to a specific user.
 
+```shell
+curl -X POST "https://127.0.0.1.xip.io/api/v1/users/d19bff36-4733-11e5-946b-9ba904d8238e/beneficiaries/bd9e473d-d8cf-4a30-b639-f2e21ee7a5ec"
+  -H "Authorization: Token token=YOURTOKEN"
+  -H "Content-Type: application/json"
+  -d '{"amount":"50000"}'
+```
 ### HTTP Request
 
 `POST https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>`
@@ -155,13 +161,36 @@ amount | Amount of money to transfer to the user in cents
 The OTP is available via `GET https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/otp` in the
 development environment to obtain the 6 character OTP code for posting to https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/release.
 
+## Retreiving the OTP in Test
+
+This endpoint retreives the OTP for releasing a payment being made to specific beneficiary belonging to a specific user.
+Please note that this route is only exposed in our test environment.
+
+```shell
+curl "https://127.0.0.1.xip.io/api/v1/users/d19bff36-4733-11e5-946b-9ba904d8238e/beneficiaries/bd9e473d-d8cf-4a30-b639-f2e21ee7a5ec/payments/40351988-d0d7-40a3-b558-92e35e2af8ac/otp"
+  -H "Authorization: Token token=YOURTOKEN"
+  -H "Content-Type: application/json"
+```
+
+### HTTP Request
+
+`POST https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/otp`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+USER | The UUID of the user the beneficiary belongs to
+BENEFICIARY | The UUID of the beneficiary being paid
+PAYMENT | The UUID of the queued to be processed payment for the beneficairy
+
 ## Release a payment (for the end-user confirming the OTP)
 
 This endpoint releases the payment instruction to the specific beneficiary belonging to a specific user.
 
 ### HTTP Request
 
-`POST https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>`
+`POST https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/release`
 
 ### URL Parameters
 
@@ -175,8 +204,7 @@ PAYMENT | The UUID of the queued to be processed payment for the beneficairy
 
 Parameter | Description
 --------- | -----------
-amount | Amount of money to transfer to the user in cents
-
+otp | One Time Password to release the payment to the beneficiary
 
 ## List Banks (for use when creating a beneficiary)
 
