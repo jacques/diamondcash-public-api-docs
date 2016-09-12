@@ -152,6 +152,9 @@ Parameter | Description
 --------- | -----------
 amount | Amount of money to transfer to the user in cents
 
+The OTP is available via `GET https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/otp` in the
+development environment to obtain the 6 character OTP code for posting to https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/release.
+
 ## List Banks (for use when creating a beneficiary)
 
 ```shell
