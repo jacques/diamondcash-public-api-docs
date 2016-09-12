@@ -144,7 +144,7 @@ This endpoint creates a payment the specific beneficiary belonging to a specific
 Parameter | Description
 --------- | -----------
 USER | The UUID of the user the beneficiary belongs to
-BENEFICIARY | The UUID of the beneficiary being tombstoned
+BENEFICIARY | The UUID of the beneficiary being paid
 
 ### POST Parameters
 
@@ -154,6 +154,29 @@ amount | Amount of money to transfer to the user in cents
 
 The OTP is available via `GET https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/otp` in the
 development environment to obtain the 6 character OTP code for posting to https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>/release.
+
+## Release a payment (for the end-user confirming the OTP)
+
+This endpoint releases the payment instruction to the specific beneficiary belonging to a specific user.
+
+### HTTP Request
+
+`POST https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>/payments/<PAYMENT>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+USER | The UUID of the user the beneficiary belongs to
+BENEFICIARY | The UUID of the beneficiary being paid
+PAYMENT | The UUID of the queued to be processed payment for the beneficairy
+
+### POST Parameters
+
+Parameter | Description
+--------- | -----------
+amount | Amount of money to transfer to the user in cents
+
 
 ## List Banks (for use when creating a beneficiary)
 
