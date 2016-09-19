@@ -141,6 +141,18 @@ curl -X POST "https://127.0.0.1.xip.io/api/v1/users/d19bff36-4733-11e5-946b-9ba9
   -H "Content-Type: application/json"
   -d '{"amount":"50000"}'
 ```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "status": "ok",
+    "details": {
+        "uuid": "80d907f3-4f6f-4443-bafc-d1165509da61"
+    }
+}
+```
+
 ### HTTP Request
 
 `POST https://127.0.0.1.xip.io/api/v1/users/<USER>/beneficiaries/<BENEFICIARY>`
@@ -167,9 +179,20 @@ This endpoint retreives the OTP for releasing a payment being made to specific b
 Please note that this route is only exposed in our test environment.
 
 ```shell
-curl "https://127.0.0.1.xip.io/api/v1/users/d19bff36-4733-11e5-946b-9ba904d8238e/beneficiaries/bd9e473d-d8cf-4a30-b639-f2e21ee7a5ec/payments/40351988-d0d7-40a3-b558-92e35e2af8ac/otp"
+curl -X POST "https://127.0.0.1.xip.io/api/v1/users/d19bff36-4733-11e5-946b-9ba904d8238e/beneficiaries/bd9e473d-d8cf-4a30-b639-f2e21ee7a5ec/payments/40351988-d0d7-40a3-b558-92e35e2af8ac/otp"
   -H "Authorization: Token token=YOURTOKEN"
   -H "Content-Type: application/json"
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "status": "ok",
+    "details": {
+        "otp": "123456"
+    }
+}
 ```
 
 ### HTTP Request
