@@ -6,7 +6,7 @@ Welcome to the Symelation Platform API! You can use our API to access Symelation
 
 You can view code examples in the dark area to the right.
 
-If you have any queries about the Symelation Platform API, please direct them to jacques at transactionafrica dot co dot za.
+If you have any queries about the Symelation Platform API, please direct them to jacques at siberia dot co dot za.
 
 Our API uses JSON payloads over HTTPS and returns JSON payloads back.
 
