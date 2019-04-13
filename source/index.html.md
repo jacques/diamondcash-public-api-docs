@@ -15,6 +15,7 @@ includes:
   - introduction
   - authentication
   - users
+  - documents
   - wallets
   - debitcards
   - beneficiaries
@@ -23,6 +24,7 @@ includes:
   - prepaid
   - errors
   - faq
+  - glossary
 
 search: true
 ---
