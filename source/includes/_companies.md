@@ -147,8 +147,9 @@ curl -X POST "https://127.0.0.1.xip.io/api/v1/companies/UUID/payments"
 }
 ```
 
-This endpoint creates a new customer on the Symelation Platform.  During the process a wallet is create for the customer.
-If autoload settings are not specified, the  defaults listed below are utilised.
+This endpoint is used to create payment batches for release on the Symelation Platform.  It supposed both On Net (i.e. to other users on the platform)
+or Off Net (i.e. to an off platform bank account such as a vendors bank account at any bank).  The branch code 000000 indicates that the payment
+is an On Net payment.  `account_type` should be 1 for an On Net transaction and `branch_code` 000000.
 
 ### HTTP Request
 
@@ -158,7 +159,20 @@ If autoload settings are not specified, the  defaults listed below are utilised.
 
 Parameter | Description
 --------- | -----------
-UUID | The UUID of the company to retrieve
+UUID | The UUID of the company to load payment instructions against
+
+### JSON Payload Parameters
+
+Uses an array of arrays of the following parameters.  Expects to find 1 or more arrays with the following keys:
+
+Parameter | Type | Description
+--------- | ---- | -----------
+branch_code | string(6) | Branch code (i.e. 000000 for On Net, 580105 for Investec, etc.)
+account_type | integer | Bank Account Type. 1 == Current / Cheque Account | 2 == Savings account | 3 == Transmission account.  Use 1 for On Net Payments.
+account_number | integer | The bank account number or wallet account number for the recipient of the payment
+reference1 | string(16) | This is the reference that goes onto your business accounts statement
+reference2 | string(16) | This is the reference that goes onto your beneficiaries accounts statement
+amount | integer | Amount of money to pay over to the recipient in ZAR cents
 
 ## Get Payment Batches
 

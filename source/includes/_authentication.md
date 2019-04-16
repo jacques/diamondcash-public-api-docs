@@ -11,8 +11,6 @@ curl "api_endpoint_here"
   -H "Content-Type: application/json"
 ```
 
-> Example with PHP  of setting the headers:
-
 ```php
 <?php
 ...
@@ -28,7 +26,7 @@ request['authorization'] = 'Token token=YOURTOKEN'
 request.content_type = "application/json"
 ```
 
-```node
+```javascript
 request({
     headers: {
       'Authorization': 'Token token=YOURTOKEN',

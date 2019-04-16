@@ -221,6 +221,15 @@ curl -X POST "https://127.0.0.1.xip.io/api/v1/users/5370faea-ec41-11e5-b754-13ac
 
 > The above command returns JSON structured like this:
 
+```json
+{
+  "status": "ok",
+  "details": {
+    "job_id": "6e7c18d8-535b-11e7-b086-dfc8a38f9f0f"
+  }
+}
+```
+
 ### HTTP REQUEST
 
 `POST /api/v1/users/<USER>/resendwelcomesms`
@@ -230,6 +239,12 @@ curl -X POST "https://127.0.0.1.xip.io/api/v1/users/5370faea-ec41-11e5-b754-13ac
 Parameter | Description
 --------- | -----------
 USER | The UUID of the user to resend the SMS message to
+
+### Response Result Set
+
+Parameter | Type | Description
+--------- | ---- | -----------
+job_id | string (36) | UUID of the queued job to send the welcome sms out
 
 ## Search Users (Customers)
 

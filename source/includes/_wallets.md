@@ -34,6 +34,7 @@ curl "https://127.0.0.1.xip.io/api/v1/users/d19bff36-4733-11e5-946b-9ba904d8238e
       "account_number": "44445555666",
       "description": "Tim's Wallet",
       "account_type": "wallet",
+      "currency": "710",
       "balance": "123456"
     }
   ]
@@ -60,6 +61,7 @@ uuid | string (36) | UUID of the wallet
 account_number | integer | Account number for the wallet
 description | string (64) | Description of the wallet (i.e Firstname's Wallet)
 account_type | enum | `wallet` for wallet
+currency | integer | ISO4217 Code Number
 balance | integer | balance of the wallet in cents
 
 ## Fetching a mini statement for a users wallet
@@ -113,7 +115,11 @@ ACCOUNT | The UUID of the account to retrieve
 
 Parameter | Type | Description
 --------- | ---- | -----------
-uuid | string (36) | UUID of the user
+txn_ref | string (36) | UUID of the user
+statement_date | string (36) | UUID of the user
+reference1 | string (32) | Transaction classification
+reference2 | string (64) | Narrative of the transaction
+amount | integer | Amount of the transaction in cents
 
 ## Listing transactions for a users wallet
 
@@ -172,4 +178,8 @@ ACCOUNT | The UUID of the account to retrieve
 
 Parameter | Type | Description
 --------- | ---- | -----------
-uuid | string (36) | UUID of the user
+txn_ref | string (36) | UUID of the user
+statement_date | string (36) | UUID of the user
+reference1 | string (32) | Transaction classification
+reference2 | string (64) | Narrative of the transaction
+amount | integer | Amount of the transaction in cents
